@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Database</title>
+    </head>
+    <body>
+        {{data}}
+
+        <form method="POST">
+            <input type="text" name="scheme_code" placeholder="Enter the fund id"><br><br>
+            <input type="submit" value="submit">
+        </form><br><br>
+
+        <table border="1">
+            <tr>
+                <th>SCHEME CODE</th>
+                <th>SCHEME NAME</th>
+                <th>NAV</th>
+            </tr>
+            {%for i in data %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.fund_house}}</td>
+                <td>{{i.nav}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </body>
+</html>
